@@ -1,0 +1,25 @@
+{
+  "name": "backex",
+  "version": "0.0.1",
+  "description": "Backend Exercice",
+  "main": "./src/server.js",
+  "scripts": {
+     "dev": "nodemon ." 
+
+  },
+  "keywords": [
+    "mongo",
+    "api"
+  ],
+  "author": "Pepe Olivert <jose.olivert@altumproyectos.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.8",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

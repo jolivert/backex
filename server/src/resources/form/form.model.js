@@ -2,16 +2,12 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const formSchema = new Schema(
   {
-    emp: {
-      type: String,
-      required: true,
-      unique: true,
-      maxlength: 50,
-    },
+    emp: { type: String, required: true, unique: true },
+    tipo: { type: String },
   },
   { timestamps: true }
 );
 
-const Form = mongoose.model('form',formSchema);
+const Form = mongoose.model("form", formSchema);
 
-module.exports= Form;
+module.exports = Form;

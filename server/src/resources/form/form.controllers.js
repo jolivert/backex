@@ -15,6 +15,21 @@ const createOne = async(req,res)=> {
     }
 }
 
+const deleteOne = async(req,res)=> {
+    try{
+
+        const delForm =req.body;
+        const del = await Form.deleteOne(delForm)
+        
+        res.status(200).send({results:[del]});
+
+    } catch (e){
+        res.status(500).send({error:"Creation failed"});
+
+    }
+}
+
 module.exports = {
     createOne,
+    deleteOne,
 }

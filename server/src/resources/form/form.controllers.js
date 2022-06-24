@@ -19,17 +19,30 @@ const deleteOne = async(req,res)=> {
     try{
 
         const delForm =req.body;
-        const del = await Form.deleteOne(delForm)
+        const del = await Form.deleteOne(delForm);
         
         res.status(200).send({results:[del]});
 
     } catch (e){
-        res.status(500).send({error:"Creation failed"});
+        res.status(500).send({error:" failed"});
 
+    }
+}
+
+const getOne = async(req,res)=> {
+
+    try{
+        const getForm = req.body;
+        const getM = await Form.findOne(getForm);
+        res.status(200).send({results:[getM]});
+    }
+    catch (e) {
+        res.status(500).send({error:"failed"});
     }
 }
 
 module.exports = {
     createOne,
     deleteOne,
+    getOne,
 }
